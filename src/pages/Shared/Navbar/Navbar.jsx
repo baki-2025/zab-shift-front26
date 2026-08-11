@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Link, NavLink } from 'react-router';
 import useAuth from '../../../hooks/useAuth';
-import Logo from '../../../components/Logo';
+import Logo from '../../../components/Logo/Logo';
 
 const NavBar = () => {
 

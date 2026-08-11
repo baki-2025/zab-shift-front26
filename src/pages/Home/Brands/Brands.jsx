@@ -15,10 +15,14 @@ const brandLogos = [amazon, amazon_vector, casio, moonstar, randstad, star, star
 
 
 const Brands = () => {
+    const slidesPerView = 4;
+    const canEnableLoop = brandLogos.length > slidesPerView;
+
     return (
         <Swiper
-        loop={true}
-        slidesPerView={4}
+        loop={canEnableLoop}
+        slidesPerView={slidesPerView}
+        slidesPerGroup={1}
         centeredSlides={true}
         spaceBetween={30}
         grabCursor={true}

@@ -10,6 +10,8 @@ import ReviewCard from "./ReviewCard";
 
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
+  const slidesPerView = 3;
+  const canEnableLoop = reviews.length > slidesPerView;
 
   useEffect(() => {
     fetch("/reviews.json")
@@ -27,11 +29,12 @@ const Reviews = () => {
       </div>
 
       <Swiper
-      loop={true}
+        loop={canEnableLoop}
         effect="coverflow"
         grabCursor={true}
         centeredSlides={true}
-        slidesPerView={3}
+        slidesPerView={slidesPerView}
+        slidesPerGroup={1}
         coverflowEffect={{
           rotate: 50,
           stretch: 0,

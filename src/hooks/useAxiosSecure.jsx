@@ -10,7 +10,9 @@ const useAxiosSecure = () => {
     // Create axios instance only once
     const axiosSecure = useMemo(() => {
         return axios.create({
-            baseURL: 'http://localhost:3000',
+            
+            // baseURL: 'http://localhost:3000',
+            baseURL: import.meta.env.VITE_api_url || 'https://zap-shift-server-phi.vercel.app',
             withCredentials: true
         });
     }, []);
