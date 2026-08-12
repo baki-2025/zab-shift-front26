@@ -11,8 +11,8 @@ const useAxiosSecure = () => {
     const axiosSecure = useMemo(() => {
         return axios.create({
             
-            // baseURL: 'http://localhost:3000',
-            baseURL: import.meta.env.VITE_api_url || 'https://zap-shift-server-phi.vercel.app',
+            baseURL: 'http://localhost:3000',
+            // baseURL: import.meta.env.VITE_api_url || 'https://zap-shift-server-phi.vercel.app',
             withCredentials: true
         });
     }, []);
